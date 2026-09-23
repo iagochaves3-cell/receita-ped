@@ -1,0 +1,20 @@
+{
+  "plugin-original/.codex-plugin/plugin.json": "e4c61215eb8bbef82b48271337309d5058842380bcc2b2a669cc42ae00d2563c",
+  "plugin-original/assets/gpt-icon.png": "66ee17745d582da654108c1de3a7b6c17e3a87016cde4670cf1c878d0c0f2310",
+  "plugin-original/skills/instructions/SKILL.md": "b770e58c10955a4ef52d5bb5a8066f3397f7488e9fd957cd303481afeac47b04",
+  "plugin-original/skills/instructions/agents/openai.yaml": "7d456fa8ecd738f284bfdd5041cdfd41827a1919f2d5aca34acb90034cdd96cc",
+  "plugin-original/skills/instructions/lookup/knowledge-index.json": "c04a9266318e0ba5689f95d43be11fd171b300e45a9b4a9f288611b4bd09e38b",
+  "plugin-original/skills/instructions/references/ARQUIVO-MESTRE.pdf": "ad9f8b325deffe70bd1c238fbc29f908285ba9bbce6ecb58ffaf68a82eaa0630",
+  "plugin-original/skills/instructions/references/BASE DE RECEITAS (MEDICAÇÕES).txt": "e2aea16b2f676e6346e632eb27598afaad4f0fbcb5218b15a37d9fcc7a1ec472",
+  "plugin-original/skills/instructions/references/Configuracoes_Completas_Prescricao_Pediatrica_Segura (1).pdf": "c8beb6e3f4d54bdae1c66fd3276b35c062f898eedef33395a5ed793fc9227452",
+  "plugin-original/skills/instructions/references/Exportacao_Completa_5_SitesGPTs_2026-08-22.pdf": "c50d5a1bec3c6c957617427cf4e9ca4ce69aae1e8ca721d38041cc87e26dcc13",
+  "plugin-original/skills/instructions/references/Guia Completo de Farmacoterapia Pediátrica.docx": "6894fe7b9b15cb3c4cdcfafa8146bbc751f7fd057360c1f6989bfb83978d7177",
+  "plugin-original/skills/instructions/references/Guia_Farmacoterapia_Pediatrica.pdf": "d381edd5ec69d799763fc20224e1c1caa2669c405f3352291ff2037c5e2e19bd",
+  "plugin-original/skills/instructions/references/INSTRUÇÕES GERAIS.docx": "a5acadacf62aa6fa4391f490dd5557b01da8127bfb381405035458814e693335",
+  "plugin-original/skills/instructions/references/MEDICAÇÕES EM PEDIATRIA.txt": "a2be1525fed1526017b256b84cf00bc9043c9bf137295bed6e52fdc60a9e373b",
+  "plugin-original/skills/instructions/references/MODELO DE RECEITAS E ORIENTAÇÕES.docx": "aa4298995e5e401085476b9713603eac4df782825eebc5633b3e3fdb2983114f",
+  "plugin-original/skills/instructions/references/Modelo-receita-CBD-H3.docx": "ab16fd12d0af4119be9df483adf22570b4b24ff5943df24aaa267a4826f7a36d",
+  "plugin-original/skills/instructions/references/NEXO_Farmacoterapia_Pediatrica_Consolidada_Auditavel.pdf": "4d03fab6cde8602f904e09811dc462758dafd43dbe7d38a069e51fc84f846e42",
+  "plugin-original/skills/instructions/references/RECEITA MÉDICA.odt": "b753866f0bf38f770520b31f0983c27d4e62e157afa5765f87f785ec0d7b54f3",
+  "plugin-original/skills/instructions/references/regras ao codex.txt": "f80496aab37a542a716161c879e4a2cc8d241b3e580bd094df6ad2ee4d46483b"
+}
