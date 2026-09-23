@@ -40,3 +40,36 @@ Execute `python -m unittest -v test_server.py` com Python 3.12 ou compatível. O
 ## Pendências para aplicação clínica
 
 Implementar e validar o motor clínico e suas fontes, revisar instruções e referências com responsável clínico, implementar proteção de dados apropriada e integrar a API ao consumidor. A publicação deste serviço documental não conclui essas etapas nem confirma migração funcional clínica. Não foi criada uma URL HTTPS nesta entrega.
+
+
+## Incremento de integração — 23/09/2026 — NÃO PUBLICADO
+
+Branch local `feat/nexo-evidence-integration`. Publicação e PR bloqueados pelo
+conector GitHub: HTTP 403 `Resource not accessible by integration`.
+
+Foram acrescentadas duas rotas POST autenticadas: `/v1/evidence/search` e
+`/v1/clinical/review`, como proxy de servidor para o NEXO, domínio `prescription`.
+O cliente canônico está em `nexo-clinical/integrations/nexo_client.py`. A pesquisa
+e revisão ficam centralizadas no NEXO, sem duplicar o motor clínico. O servidor
+continua sem gerar prescrição ou parâmetros terapêuticos. O serviço documental
+e suas rotas anteriores foram preservados. As instruções originais não são
+injetadas automaticamente no modelo; esta etapa não conclui migração funcional clínica.
+
+Configure somente pelo cofre/Variables do Railway: `SERVICE_API_TOKEN` próprio,
+`NEXO_API_URL=https://nexo-clinical-api-production.up.railway.app` e
+`NEXO_INTEGRATION_TOKEN` compartilhado com o novo endpoint restrito do NEXO.
+Não configure antes da publicação do incremento NEXO. Não enviar chaves pelo
+chat, frontend, URL ou arquivos versionados. Valores vazios em `.env.example`.
+
+O diretório raiz do serviço Railway deve ser `/Receita_PED_Repositorio_Railway` nesta estrutura
+atual do repositório. Não mover/recriar o pacote para fazê-lo parecer na raiz.
+
+Testes: `python -m unittest -v test_server.py test_nexo_adapter.py`.
+16 testes passaram, incluindo verificação de integridade dos arquivos originais.
+Teste autenticado em produção e domínio HTTPS ainda não confirmados.
+`nexo_configured` indica somente presença de configuração, não teste remoto.
+Falha do NEXO produz 503; rascunho nunca é aprovação clínica. Sem nome,
+prontuário ou data de nascimento no payload. Usar apenas conteúdo desidentificado.
+
+Arquivos originais ausentes foram restaurados apenas quando o hash coincidiu
+com `original-sha256.json`; conteúdo existente preservado.

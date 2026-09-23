@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Iago Almeida"
+  },
+  "description": "Receita médica prática na população pediátrica.",
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Other",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [],
+    "developerName": "Iago Almeida",
+    "displayName": "Receita PED",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "Receita médica prática na população pediátrica.",
+    "shortDescription": "Receita médica prática na população pediátrica."
+  },
+  "name": "gpt-e99bb653b839b267957d2919ff50fadd",
+  "skills": "./skills/",
+  "version": "0.31.1+bundle.d311ca7717a78f9e6936609e886457ea"
+}
