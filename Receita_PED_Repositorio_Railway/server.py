@@ -1,4 +1,5 @@
 """Serviço documental. Não executa decisões clínicas."""
+from prescription_contract import capabilities as prescription_capabilities, unavailable, PRESCRIPTION_PATH
 import hmac
 import json
 import os
@@ -45,7 +46,7 @@ def make_server(host, port, token):
             if not self.authenticated():
                 return
             if self.path == "/v1/capabilities":
-                return self.reply(200, {"name": META["name"], "version": META["original_version"], "capabilities": ["read_instructions", "evidence_search_proxy", "evidence_review_draft_proxy"], "nexo_configured": configured(), "domain": DOMAIN, "clinical_engine": False, "clinical_validation": False, "sites_integration_verified": False})
+                return self.reply(200, {"name": META["name"], "version": META["original_version"], "capabilities": ["read_instructions", "evidence_search_proxy", "evidence_review_draft_proxy"], "nexo_configured": configured(), "domain": DOMAIN, "clinical_engine": False, "clinical_validation": False, "sites_integration_verified": False, "prescription_integration": prescription_capabilities()})
             if self.path == "/v1/instructions":
                 content = (ROOT / "plugin-original/skills/instructions/SKILL.md").read_text()
                 return self.reply(200, {"name": META["name"], "instructions": content, "clinically_validated": False})
@@ -54,6 +55,8 @@ def make_server(host, port, token):
             self.close_connection = True
             if not self.authenticated():
                 return
+            if self.path in {PRESCRIPTION_PATH, "/v1/prescribe"}:
+                return self.reply(501, unavailable())
             if self.path not in PATHS:
                 return self.reply(501, {"error": "clinical_engine_not_implemented", "message": "Geração de conduta/prescrição não implementada."})
             if self.headers.get("Transfer-Encoding"):
